@@ -9,10 +9,10 @@
   --brand-pink: #ef4565;
   --brand-blue: #094067;
   --brand-light-blue: #d8eefe;
-  --brand-white: #fffffe;  
+  --brand-white: #fffffe;
   --gray-paragraph: #495057;
   --header-height: 7.2rem;
-  --light-background: #f7f9f9;  
+  --light-background: #f7f9f9;
 }
 
 html {
@@ -21,7 +21,9 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  color: var(--gray-paragraph);
+  line-height: 150%;
   overflow: overlay;
   background-color: var(--light-background);
 }
@@ -41,9 +43,27 @@ a {
   margin-inline: auto;
 }
 
+.cta {
+  border: none;
+  background-color: var(--brand-pink);
+  padding: 1.6rem 3.2rem;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  width: 23rem;
+  margin-inline: auto;
+}
+
 /*HEADER*/
 
-header {
+#header {
   position: fixed;
   top: 0;
   left: 50%;
@@ -51,11 +71,11 @@ header {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
   z-index: 1;
 }
 
-header nav {
+#header nav {
   display: flex;
 }
 
@@ -66,15 +86,15 @@ nav button {
 }
 
 /*=============CHANGING THE HEADER ON SCROLL============ */
-header.scroll {
+#header.scroll {
   background-color: var(--brand-pink);
 }
 
-header.scroll .logo path {
+#header.scroll .logo path {
   fill: #fff;
 }
 
-header.scroll .hamburger-menu path {
+#header.scroll .hamburger-menu path {
   stroke: #fff;
 }
 
@@ -115,9 +135,12 @@ header.scroll .hamburger-menu path {
 }
 
 .menu .social-links {
+  margin-top: 8rem;
+}
+
+.social-links {
   display: flex;
   gap: 3.2rem;
-  margin-top: 8rem;
   justify-content: center;
   align-items: center;
 }
@@ -139,7 +162,7 @@ body.menu-expanded {
   overflow: hidden;
 }
 
-body.menu-expanded > :not(header) {
+body.menu-expanded > :not(#header) {
   visibility: hidden;
 }
 
@@ -147,18 +170,30 @@ body.menu-expanded .logo path {
   fill: #fff;
 }
 
-body.menu-expanded .menu {    
+body.menu-expanded .menu {
   opacity: 1;
   visibility: visible;
   transition: transform 300ms;
   transform: translateY(0%);
 }
 
-/*HERO SECTION*/
+/*MAIN*/
+.img-wrapper {
+  margin-top: 4rem;
+}
 
-section {
+.img-wrapper img {
+  max-width: 100%;
+  display: block;
+  margin-inline: auto;
+}
+
+.hero,
+.section {
   text-align: center;
 }
+
+/*HERO SECTION*/
 
 .hero {
   padding-top: calc(4rem + var(--header-height));
@@ -186,44 +221,14 @@ section {
 .hero-subtitle {
   color: var(--brand-pink);
   font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 150%;
+  font-size: 1.4rem;  
   letter-spacing: 0.08rem;
   margin-bottom: 1.6rem;
 }
 
 .hero-description {
   font-size: 1.8rem;
-  line-height: 150%;
-  color: var(--gray-paragraph);
   margin-bottom: 3.2rem;
-}
-
-.cta {
-  border: none;
-  background-color: var(--brand-pink);
-  padding: 1.6rem 3.2rem;
-  border-radius: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1.8rem;
-  text-transform: uppercase;
-  width: 23rem;
-  margin-inline: auto;
-}
-
-.hero-img-wrapper {
-  margin-top: 4rem;
-}
-
-.hero-img-wrapper img {
-  display: block;
-  margin-inline: auto;
 }
 
 .stats {
@@ -245,12 +250,10 @@ section {
 }
 
 .stat p {
-  color: var(--brand-pink);
-  line-height: 150%;
-  font-size: 1.6rem;
+  color: var(--brand-pink);  
 }
 
-/*SECTION: SERVICES */
+/*SECTIONS*/
 
 .section {
   padding-block: 10rem;
@@ -260,8 +263,7 @@ section {
   color: var(--brand-pink);
   font-weight: 700;
   font-size: 1.4rem;
-  text-transform: uppercase;
-  line-height: 150%;
+  text-transform: uppercase;  
   letter-spacing: 0.08rem;
   margin-bottom: 1.6rem;
 }
@@ -271,6 +273,11 @@ section {
   font-size: 3rem;
   line-height: 3.9rem;
   font-weight: 700;
+}
+
+/*SECTION: SERVICES*/
+
+#services header {
   margin-bottom: 6rem;
 }
 
@@ -296,7 +303,74 @@ section {
   line-height: 3.1rem;
 }
 
-.service-description {
-  color: var(--gray-paragraph);
-  line-height: 150%;
+/*SECTION: ABOUT */
+
+#about {
+  background-color: var(--brand-white);
+}
+
+#about header {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p + p {
+  margin-top: 1.2rem;
+}
+
+#about,
+#contact {
+  text-align: left;
+}
+
+#about img,
+#contact img {
+  border-radius: 10px;
+}
+
+/*SECTION: CONTACT */
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contact-info + .contact-info {
+  margin-top: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+#contact .img-wrapper {
+  margin-top: 6rem;
+}
+
+#contact .cta {
+  margin-left: 0;
+}
+
+/*FOOTER */
+
+footer {
+  background-color: var(--brand-pink);
+  padding-block: 6rem;
+}
+
+footer p {
+  color: #fff;
+}
+
+.footer-logo {
+  margin-bottom: 2.4rem;
+}
+
+footer .social-links {
+  justify-content: start;
+  margin-top: 3.2rem;
+}
+
+footer p + p {
+  margin-top: 1.2rem;
 }
