@@ -19,4 +19,4 @@ ScrollReveal({
 	origin: "top",
 	distance: "30px",
 	duration: 700,
-}).reveal("#home, #home .stat, #services, #services .service-item")
+}).reveal("#home, #home .stat, #services header, #services .service-item, #about header, #about .content, #about .content img, #contact header, #contact .content, #contact .content img, footer")
