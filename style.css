@@ -177,7 +177,7 @@ body.menu-expanded .menu {
   transform: translateY(0%);
 }
 
-/*MAIN*/
+/*SECTIONS*/
 .img-wrapper {
   margin-top: 4rem;
 }
@@ -191,6 +191,25 @@ body.menu-expanded .menu {
 .hero,
 .section {
   text-align: center;
+}
+
+.section {
+  padding-block: 10rem;
+}
+
+.section-title {
+  color: var(--brand-blue);
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+.section-subtitle {
+  color: var(--brand-pink);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  margin-bottom: 1.6rem;
 }
 
 /*HERO SECTION*/
@@ -211,23 +230,13 @@ body.menu-expanded .menu {
   z-index: -1;
 }
 
-.hero-title {
+.hero .section-title {
   font-size: 3.4rem;
   line-height: 4.4rem;
-  color: var(--brand-blue);
   margin-bottom: 2.4rem;
 }
 
-.hero-subtitle {
-  color: var(--brand-pink);
-  font-weight: 700;
-  font-size: 1.4rem;  
-  letter-spacing: 0.08rem;
-  margin-bottom: 1.6rem;
-}
-
-.hero-description {
-  font-size: 1.8rem;
+.hero .content p {
   margin-bottom: 3.2rem;
 }
 
@@ -250,29 +259,7 @@ body.menu-expanded .menu {
 }
 
 .stat p {
-  color: var(--brand-pink);  
-}
-
-/*SECTIONS*/
-
-.section {
-  padding-block: 10rem;
-}
-
-.section-title {
   color: var(--brand-pink);
-  font-weight: 700;
-  font-size: 1.4rem;
-  text-transform: uppercase;  
-  letter-spacing: 0.08rem;
-  margin-bottom: 1.6rem;
-}
-
-.section-subtitle {
-  color: var(--brand-blue);
-  font-size: 3rem;
-  line-height: 3.9rem;
-  font-weight: 700;
 }
 
 /*SECTION: SERVICES*/
