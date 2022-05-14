@@ -4,6 +4,30 @@ window.addEventListener('scroll', onScroll)
 function onScroll() {
   changeHeaderStyleOnScroll()
   showBackToTopButtonOnScroll()
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
+}
+
+function activateMenuAtCurrentSection(section) {
+  //define the target line, middle of the viewport
+  const targetLine = scrollY + innerHeight / 2
+  //get which section is active:
+  //verify if the top of section is before the target line
+  //verify if the bottom of the section is after the target line
+  const sectionTop = section.offsetTop
+  const sectionHeight = section.offsetHeight
+  const sectionBottom = sectionTop + sectionHeight
+  const sectionId = section.getAttribute('id')
+  //get the a element that has href = sectionId
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+  //targetLine has to be between the top and bottom of the section
+  if (sectionTop <= targetLine && sectionBottom >= targetLine) {
+    menuElement.classList.add('active')    
+  } else {
+    menuElement.classList.remove('active')    
+  }
 }
 
 function changeHeaderStyleOnScroll() {
