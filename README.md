@@ -10,12 +10,18 @@ Project developed during the Next Level Week, created by Rocketseat, a Brazilian
 - CSS
 - JavaScript
 
+## JavaScript Libraries
+
+- <a href="https://scrollrevealjs.org/" target="_blank">ScrollReveal</a>
+- <a href="https://swiperjs.com/" target="_blank">Swiper</a>
+
 ## Built with
 
 - Mobile first
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Flexbox
+- CSS Grid Layout
 
 ***
 ##### Made with 💜 by Juliana Chagas 
