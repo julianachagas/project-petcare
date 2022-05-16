@@ -7,6 +7,7 @@ function onScroll() {
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
   activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(testimonials)
   activateMenuAtCurrentSection(contact)
 }
 
@@ -61,5 +62,23 @@ ScrollReveal({
   distance: '30px',
   duration: 700
 }).reveal(
-  '#home, #home .stat, #services header, #services .service-item, #about header, #about .content, #about .content img, #contact header, #contact .content, #contact .content img, footer'
+  '#home, #home .stat, #services header, #services .service-item, #about header, #about .content, #about img, #testimonials header, .testimonials-wrapper, #testimonials .banner, #contact header, #contact .content, #contact img, footer'
 )
+
+//Testimonials carousel/slider
+
+const swiper = new Swiper('.swiper', {  
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    1024: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+      spaceBetween: 40,
+    }
+  }
+}); 
