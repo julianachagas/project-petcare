@@ -8,13 +8,15 @@
   font-size: 62.5%;
   --header-height: 7.2rem;
   /* --primary-color: #ef4565; */
-  --primary-color: #cd3d58;
+  /* --primary-color: #cd3d58; */
+  --primary-color: #C3324D;  
   --secondary-color: #094067;
-  --tertiary-color: #d8eefe;
+  --tertiary-color: #d8eefe; 
   --button-hover: #bc1030;
   --paragraph: #495057;
   --light-background: #f9f9f9;
 }
+
 p html {
   scroll-behavior: smooth;
 }
@@ -74,7 +76,7 @@ a {
 }
 
 #header .logo path[fill*='#EF4565'],
-#backToTopButton circle {
+#backToTopButton circle, .banner .cta path, #testimonials path  {
   fill: var(--primary-color);
 }
 
@@ -89,7 +91,7 @@ a {
 }
 
 body.menu-expanded #header .logo path,
-#header.scroll .logo path {
+#header.scroll .logo path, .cta path {
   fill: #fff;
 }
 
@@ -103,7 +105,7 @@ body.menu-expanded #header .logo path,
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   height: var(--header-height);
 }
 
@@ -345,7 +347,113 @@ body.menu-expanded .menu {
   border-radius: 10px;
 }
 
+/*SECTION: TESTIMONIALS */
+
+#testimonials {
+  padding-bottom: 0;
+}
+
+#testimonials header {
+  margin-bottom: 6rem;
+}
+
+#testimonials .testimonials-wrapper {
+  padding-bottom: 6rem;
+}
+
+#testimonials .testimonial {
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+  padding: 3.2rem;  
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);  
+}
+
+#testimonials .testimonial > p {
+  margin-block: 2rem;
+}
+
+#testimonials .testimonial-info {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: auto;
+}
+
+#testimonials .testimonial img {
+  border-radius: 50%;
+}
+
+#testimonials .testimonial-info span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* SWIPER */
+.swiper-pagination-bullet {
+  background-color: var(--tertiary-color);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+/* BANNER */
+
+.banner {
+  margin-top: 10rem;
+  padding: 5rem 3.2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;     
+}
+
+.banner p {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.9rem;  
+}
+
+.banner .cta {
+  background-color: #fff;
+  color: var(--primary-color);  
+  transition: transform 0.3s ease-in-out;
+  padding: 1.6rem 2rem;
+}
+
+
+
+
+
+
 /*SECTION: CONTACT */
+
+#contact {
+  position: relative;  
+}
+
+#contact::before {
+  content: '';
+  width: 100%;
+  height: calc(100% + 15rem);
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: -15rem;
+  left: 0; 
+  z-index: -1;   
+}
 
 #contact header {
   margin-bottom: 3.2rem;
@@ -409,6 +517,7 @@ footer .footer-info {
   visibility: hidden;
   transition: all 0.3s;
   transform: translateY(100%);
+  z-index: 2;
 }
 
 #backToTopButton.show {
@@ -439,7 +548,12 @@ footer .footer-info {
   }
 
   #header nav {
-    display: initial;    
+    display: initial;
+  }
+
+  #header svg {
+    height: 4.2rem;
+    width: auto;
   }
 
   .menu {
@@ -540,7 +654,7 @@ footer .footer-info {
   }
 
   .hero .container {
-    display: grid;    
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       'A B'
@@ -630,14 +744,14 @@ footer .footer-info {
 
   #about .container {
     display: grid;
-    grid-template-columns: 48rem 1fr;    
+    grid-template-columns: 48rem 1fr;
     gap: 6rem;
   }
 
   #contact .container {
     display: grid;
     grid-template-columns: 1fr 53.2rem;
-    gap: 6rem; 
+    gap: 6rem;
   }
 
   #about .container {
@@ -646,7 +760,7 @@ footer .footer-info {
 
   #contact .container {
     grid-template-areas: 'A B';
-  }
+  }  
 
   #about .column-a {
     align-self: center;
@@ -655,7 +769,7 @@ footer .footer-info {
   #about .column-b {
     justify-self: start;
   }
- 
+
   footer {
     padding-top: 8rem;
   }
@@ -683,5 +797,26 @@ footer .footer-info {
 
   footer .footer-info {
     grid-area: C;
+  }  
+
+  #testimonials .banner {
+    margin-top: 16rem;
+    padding: 10rem;   
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    gap: initial;
   }
+
+  .banner p {
+    font-size: 4rem;    
+    line-height: 5.2rem;
+    width: 52rem;
+  }
+
+  .banner .cta {    
+    margin: initial; 
+    padding: 1.6rem 3.2rem;   
+  }    
 }
