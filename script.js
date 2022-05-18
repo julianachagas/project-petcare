@@ -62,7 +62,7 @@ ScrollReveal({
   distance: '30px',
   duration: 700
 }).reveal(
-  '#home, #home .stat, #services header, #services .service-item, #about header, #about .content, #about img, #testimonials header, .testimonials-wrapper, #testimonials .banner, #contact header, #contact .content, #contact img, footer'
+  '#home, #home .stat, #services header, #services .service-item, #about header, #about .content, #about img, #testimonials header, .testimonials-wrapper, #testimonials .banner, #contact header, #contact .content, #contact form, footer'
 )
 
 //Testimonials carousel/slider
