@@ -1,4 +1,6 @@
+//call the function when page loads (no user scroll)
 onScroll()
+//call the function when user starts scrolling
 window.addEventListener('scroll', onScroll)
 
 function onScroll() {
@@ -13,15 +15,11 @@ function onScroll() {
 
 function activateMenuAtCurrentSection(section) {
   //define the target line, middle of the viewport
-  const targetLine = scrollY + innerHeight / 2
-  //get which section is active:
-  //verify if the top of section is before the target line
-  //verify if the bottom of the section is after the target line
+  const targetLine = scrollY + innerHeight / 2  
   const sectionTop = section.offsetTop
   const sectionHeight = section.offsetHeight
   const sectionBottom = sectionTop + sectionHeight
-  const sectionId = section.getAttribute('id')
-  //get the a element that has href = sectionId
+  const sectionId = section.getAttribute('id')  
   const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
   //targetLine has to be between the top and bottom of the section
   if (sectionTop <= targetLine && sectionBottom >= targetLine) {
@@ -32,7 +30,7 @@ function activateMenuAtCurrentSection(section) {
 }
 
 function changeHeaderStyleOnScroll() {
-  let header = document.getElementById('header')
+  const header = document.getElementById('header')
   if (scrollY > 0) {
     header.classList.add('scroll')
   } else {
@@ -41,7 +39,7 @@ function changeHeaderStyleOnScroll() {
 }
 
 function showBackToTopButtonOnScroll() {
-  let backToTopButton = document.getElementById('backToTopButton')
+  const backToTopButton = document.getElementById('backToTopButton')
   if (scrollY > 500) {
     backToTopButton.classList.add('show')
   } else {
