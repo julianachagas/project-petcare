@@ -645,11 +645,7 @@ footer .footer-info a:hover {
   .container {
     width: min(60rem, 100%);    
   }
-
-  .hero::before {
-    height: calc(92rem + var(--header-height));
-  }
-
+  
   #contact::before {      
     height: calc(100% + 12rem);    
     top: -12rem;    
