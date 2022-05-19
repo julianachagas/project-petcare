@@ -10,7 +10,7 @@
   --primary-color: #c3324d;
   --secondary-color: #094067;
   --tertiary-color: #d8eefe;
-  --button-hover: #bc1030;
+  --button-hover: #ab0e2b;
   --paragraph: #495057;
   --light-background: #f9f9f9;
 }
@@ -221,6 +221,7 @@ body.menu-expanded > :not(#header) {
   max-width: 100%;
   display: block;
   margin-inline: auto;
+  height: auto;
 }
 
 .hero,
