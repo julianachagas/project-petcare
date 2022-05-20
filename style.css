@@ -475,6 +475,10 @@ form h3 {
   margin-top: 6rem;
 }
 
+#contact .cta, .hero .cta {
+  transition: all 0.3s ease-in-out;
+}
+
 #contact .cta {
   margin-left: 0;
 }
@@ -829,7 +833,6 @@ footer .footer-info a:hover {
   .hero .cta,
   #contact .cta {
     margin: initial;
-    transition: all 0.3s ease-in-out;
   }
 
   .hero .img-wrapper img {
