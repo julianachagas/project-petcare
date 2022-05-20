@@ -1,4 +1,4 @@
-## Project PetCare
+## Project PetCare 🐶🐱
 
 Project developed during the Next Level Week (NLW Return), created by Rocketseat, a Brazilian learning platform. We were challenged to develop our own landing page and make modifications to the original project to put into practice the knowledge acquired during the classes. I developed a landing page for a fictional veterinary clinic, called PetCare. 
 
@@ -56,7 +56,7 @@ The page contains a header, five main sections: hero, services, about, testimoni
 
 ### What I learned
 
-- Change the style of the header on scroll:
+- Change the style of the header on scroll
 
 The header is fixed at the top of the viewport and when the user starts scrolling the style of the header changes. To achieve this, a JS function adds the class "scroll" to the header when `scrollY > 0`. The `scrollY` value represents the number of pixels that the document is currently scrolled vertically.
 
