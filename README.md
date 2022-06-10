@@ -48,7 +48,7 @@ The page contains a header, five main sections: hero, services, about, testimoni
 
 ### Built with
 
-- Mobile first concept
+- Mobile-first workflow
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Flexbox
